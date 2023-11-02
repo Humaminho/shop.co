@@ -1,8 +1,8 @@
-import Header from './components/header';
-import Footer from './components/footer';
-import PopUp from './components/common/pop-up';
+import Header from '../components/header';
+import Footer from '../components/footer';
+import TopBanner from '../components/common/top-banner';
 import type { Metadata } from 'next';
-import './globals.css';
+import '../assets/css/globals.css';
 
 export const metadata: Metadata = {
 	title: 'SHOP.CO',
@@ -17,7 +17,7 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={'text-sm lg:text-base'}>
-        <PopUp />
+        <TopBanner />
 				<Header />
 				{children}
 				<Footer />

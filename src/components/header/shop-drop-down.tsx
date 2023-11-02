@@ -1,4 +1,5 @@
 'use client';
+import { useEffect, useRef } from 'react';
 import ShopDropDownItem from './shop-drop-down-item';
 
 const categories = [
@@ -55,15 +56,39 @@ const categories = [
 	},
 ];
 
+export default function ShopDropDown({setOpen}: any) {
 
+  const dropDownRef = useRef<HTMLDivElement>(null);
 
-export default function ShopDropDown() {
+  useEffect(() => {
+		function handleOutsideClick(event: any) {
+			if (
+				dropDownRef.current &&
+				!dropDownRef.current.contains(event.target)
+			) {
+				setOpen(false);
+			}
+		}
+
+		document.addEventListener('mousedown', handleOutsideClick);
+
+		return () => {
+			document.removeEventListener('mousedown', handleOutsideClick);
+		};
+  }, [setOpen]);
+
 	return (
-		<div className="absolute top-[42px] lg:top-[61px] bg-white border border-gray-200 shadow-md">
+		<div
+			ref={dropDownRef}
+			className="absolute py-1 rounded-sm -left-4 top-[42px] lg:top-[57px] bg-white border border-gray-200 shadow-md"
+		>
 			<ul>
 				{categories.map((category) => {
 					return (
-						<ShopDropDownItem key={category.title} category={category} />
+						<ShopDropDownItem
+							key={category.title}
+							category={category}
+						/>
 					);
 				})}
 			</ul>

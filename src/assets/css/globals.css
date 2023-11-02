@@ -1,0 +1,50 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../fonts/Satoshi-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../fonts/Satoshi-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Satoshi';
+	src: url('../fonts/Satoshi-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-display: swap;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Integral CF';
+	src: url('../fonts/IntegralCF-Bold.woff2') format('woff2');
+	font-weight: 700;
+	font-style: normal;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+input {
+	border: none;
+	outline: none;
+}
+
+html {
+	font-family: 'Satoshi', Verdana, Geneva, Tahoma, sans-serif;
+  overflow-x: hidden;
+}
