@@ -1,6 +1,7 @@
 'use client';
 import { useRef } from 'react';
-import Logo from '../common/logo';
+import Logo from '../../common/logo';
+import Button from '@/components/common/button';
 
 export default function MobileNav() {
 	const mobileNavRef = useRef<HTMLDivElement>(null);
@@ -22,7 +23,7 @@ export default function MobileNav() {
 			<div
 				ref={layerRef}
 				id="layer"
-				className="hidden absolute top-0 right-0 bottom-0 left-0 z-10 backdrop-blur-sm brightness-90"
+				className="hidden absolute top-0 right-0 bottom-0 left-0 z-10 backdrop-blur-sm brightness-90 lg:hidden"
 				onClick={closeNav}
 			>
 				{/* Blur layer */}
@@ -30,7 +31,7 @@ export default function MobileNav() {
 			<div
 				ref={mobileNavRef}
 				id="mobile-nav"
-				className="hidden md:hidden text-base absolute z-20 top-0 left-0 right-0 bottom-0 max-w-sm overflow-hidden bg-black transition-all duration-200 -translate-x-full rounded-br-full"
+				className="hidden text-base absolute z-20 top-0 left-0 right-0 bottom-0 max-w-sm overflow-hidden bg-black transition-all duration-200 -translate-x-full rounded-br-full lg:hidden"
 			>
 				<div className="h-full px-4 flex flex-col justify-between">
 					<div className="py-5 flex justify-between items-center">
@@ -85,12 +86,12 @@ export default function MobileNav() {
 							</a>
 						</p>
 						<div className="flex gap-2 font-medium">
-							<button className="px-5 py-[6px] bg-white text-black rounded-full hover:brightness-75 transition">
-								Join Us
-							</button>
-							<button className="px-5 py-[6px] border border-dark-gray rounded-full hover:border-white transition">
-								Sign In
-							</button>
+							<Button type="full" color="white">
+								<a href="">Join Us</a>
+							</Button>
+							<Button type="outlined">
+								<a href="">Sign Up</a>
+							</Button>
 						</div>
 					</div>
 					<div className="flex flex-col gap-4 mb-5">

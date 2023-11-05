@@ -1,6 +1,6 @@
 export default function Searchbar() {
 	return (
-		<div className="group flex-grow items-center gap-3 px-4 py-3 bg-gray-100 rounded-full hidden border border-transparent hover:border-gray-200 focus-within:border-gray-200 lg:flex">
+		<div className="group flex-grow items-center gap-3 px-4 py-[10px] bg-gray-100 rounded-full hidden border border-transparent hover:border-gray-200 focus-within:border-gray-200 lg:flex">
 			<svg
 				width="24"
 				height="24"

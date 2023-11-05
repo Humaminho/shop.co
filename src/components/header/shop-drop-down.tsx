@@ -80,7 +80,7 @@ export default function ShopDropDown({setOpen}: any) {
 	return (
 		<div
 			ref={dropDownRef}
-			className="absolute py-1 rounded-sm -left-4 top-[42px] lg:top-[57px] bg-white border border-gray-200 shadow-md"
+			className="absolute py-1 rounded-sm -left-4 top-[62px] lg:top-[66px] bg-white border border-gray-200 shadow-md"
 		>
 			<ul>
 				{categories.map((category) => {

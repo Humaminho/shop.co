@@ -2,15 +2,13 @@ import { useState } from 'react';
 import MobileNav from './mobile-nav';
 
 export default function MenuBtn() {
-
-  const [menuOpen, setMenuOpen] = useState(false);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	function openNav() {
-
 		const mobileNavEl = document.getElementById('mobile-nav');
-    const layer = document.getElementById('layer');
+		const layer = document.getElementById('layer');
 		mobileNavEl?.classList.remove('hidden');
-    layer?.classList.remove('hidden');
+		layer?.classList.remove('hidden');
 
 		setTimeout(() => {
 			mobileNavEl?.classList.remove('-translate-x-full');
@@ -21,7 +19,7 @@ export default function MenuBtn() {
 
 	return (
 		<>
-			<button className="sm:hidden p-2 hover:bg-light-gray rounded-full transition duration-75">
+			<button className="lg:hidden p-2 hover:bg-light-gray rounded-full transition duration-75">
 				<svg
 					width="24"
 					height="24"

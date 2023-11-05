@@ -10,11 +10,14 @@ const config: Config = {
 		extend: {
 			colors: {
 				'light-gray': '#F2F0F1',
-        'dark-gray': '#606160',
+				'dark-gray': '#606160',
 			},
-      fontFamily: {
-        'display': ['Integral CF', 'sans-serif'],
-      }
+			fontFamily: {
+				display: ['Integral CF', 'sans-serif'],
+			},
+			screens: {
+				large: '1180px',
+			},
 		},
 	},
 	plugins: [],

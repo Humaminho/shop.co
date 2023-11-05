@@ -1,10 +1,11 @@
-import HeroSection from "@/components/home/hero-section"
+import HeroSection from '@/components/home/hero-section';
 export default function Home() {
-  return (
+	return (
 		<main className="bg-light-gray">
-			<div className="max-w-[80rem] mx-auto">
+			<div>
 				<HeroSection />
+				<div className="bg-black h-14"></div>
 			</div>
 		</main>
-  );
+	);
 }

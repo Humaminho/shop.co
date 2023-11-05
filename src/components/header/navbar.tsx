@@ -3,17 +3,32 @@ import ShopNav from './shop-nav';
 
 export default function Navbar() {
 	return (
-		<nav className="hidden sm:block">
-			<ul className="flex gap-6">
-        <ShopNav />
+		<nav className="hidden lg:block">
+			<ul className="flex">
+				<ShopNav />
 				<li>
-					<Link href="/shop">On Sale</Link>
+					<Link
+						href="/shop"
+						className="block px-3 py-5 border-b-2 border-transparent hover:border-black transition duration-100"
+					>
+						On Sale
+					</Link>
 				</li>
 				<li>
-					<a href="#">New Arrivals</a>
+					<a
+						href="#"
+						className="block px-3 py-5 border-b-2 border-transparent hover:border-black transition duration-100"
+					>
+						New Arrivals
+					</a>
 				</li>
 				<li>
-					<a href="#">Brands</a>
+					<a
+						href="#"
+						className="block px-3 py-5 border-b-2 border-transparent hover:border-black transition duration-100"
+					>
+						Brands
+					</a>
 				</li>
 			</ul>
 		</nav>

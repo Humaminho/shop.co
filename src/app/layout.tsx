@@ -16,8 +16,8 @@ export default function RootLayout({
 }) {
 	return (
 		<html lang="en">
-			<body className={'text-sm lg:text-base'}>
-        <TopBanner />
+			<body className="text-[14px] md:text-[16px]">
+				<TopBanner />
 				<Header />
 				{children}
 				<Footer />
