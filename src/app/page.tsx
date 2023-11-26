@@ -1,10 +1,12 @@
 import HeroSection from '@/components/home/hero-section';
+import BrandSection from '@/components/home/brand-section';
+
 export default function Home() {
 	return (
 		<main className="bg-light-gray">
 			<div>
 				<HeroSection />
-				<div className="bg-black h-14"></div>
+				<BrandSection />
 			</div>
 		</main>
 	);
