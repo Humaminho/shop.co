@@ -1,8 +1,15 @@
+'use client';
+import { useEffect } from 'react';
 import HeroSection from '@/components/home/hero-section';
 import BrandSection from '@/components/home/brand-section';
 import Image from 'next/image';
+import apiKey from '@/utils/test';
 
 export default function Home() {
+
+  useEffect(() => {
+    console.log(apiKey);
+  })
 	return (
 		<main className="bg-light-gray">
 			<div>
